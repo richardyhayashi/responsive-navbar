@@ -1,8 +1,10 @@
 # Build a Responsive Navbar with React + flexbox
 
+## Create React App
 
+`npx xreate-react-app moutains`
 
 
 ## YouTube
 
-By `Sanjeev Thiyagarajan`
+`Build a Responsive Navbar with React + flexbox` by `Sanjeev Thiyagarajan`
