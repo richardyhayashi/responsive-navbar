@@ -1,0 +1,19 @@
+services:
+  nginx:
+    image: nginx:1.27.0-alpine
+    ports:
+      - ${NGINX_PORT_OUT}:${NGINX_PORT}
+      - ${NGINX_SSL_OUT}:${NGINX_SSL}
+    volumes:
+      - ./etc/nginx/conf.d:/etc/nginx/conf.d:ro
+
+  mountains:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - /app/node_modiles
+    depends_on:
+      - nginx
